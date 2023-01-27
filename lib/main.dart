@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:wadafuc/pages/splash.dart';
-import 'package:wadafuc/utils/mouse_cursor.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,12 +27,7 @@ class MyApp extends StatelessWidget {
       },
       title: 'Wadafuc',
       debugShowCheckedModeBanner: false,
-      home: MultiProvider(
-        providers: [
-          ChangeNotifierProvider(create: (context) => AnimatedCursorProvider()),
-        ],
-        child: const Splash(),
-      ),
+      home: const Splash(),
     );
   }
 }
